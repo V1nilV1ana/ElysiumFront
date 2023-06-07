@@ -1,9 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Post } from '../../_models/Post';
-import { PostService } from '../../_services/post.service';
-import { Coments } from '../../_models/Coments';
-import { ComentsService } from '../../_services/coments.service';
-import { StorageService } from '../../_services/storage.service';
+import { Post } from 'src/app/_models/Post';
+import { PostService } from 'src/app/_services/post.service';
+import { Coments } from 'src/app/_models/Coments';
+import { ComentsService } from 'src/app/_services/coments.service';
+import { StorageService } from 'src/app/_services/storage.service';
 import { Router } from '@angular/router';
 
 
@@ -62,7 +62,7 @@ export class ViewPostComponent implements OnInit{
   erroP = ''
   like = 1
     
-  constructor(public postService: PostService,
+  constructor(private postService: PostService,
               private comentService: ComentsService,
               private storageService: StorageService,
               private router: Router
@@ -130,6 +130,7 @@ export class ViewPostComponent implements OnInit{
   } 
 
   updatePost(): void{
+    
 
     const data = {
       title: this.currentPost.title,
