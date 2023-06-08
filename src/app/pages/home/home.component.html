@@ -7,7 +7,7 @@
 
     <!-- The HTML5 video element that will create the background video on the header -->
     <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-      <source src="assets\video.mp4" type="video/mp4">
+      <source src="assets\video1.mp4" type="video/mp4">
     </video>
 
     <!-- The header content -->
@@ -15,10 +15,9 @@
       <div class="d-flex h-100 text-center align-items-center">
         <div class="w-100 text-white">
           <h2 class="display-3"><span>ELYSIUM</span></h2>
-          <p class="lead mb-0">Lorem ipsum dolor sit..</p>
-          <button type="button" style="color:  rgb(0, 185, 205);" class="btn btn-outline-info" *ngIf="!isLoggedIn"
+          <button type="button" style="color:  rgb(255, 255, 255);" class="btn2" *ngIf="!isLoggedIn"
             routerLink="login">Login</button>
-          <button type="button" style="color:  rgb(0, 185, 205);" class="btn btn-outline-info" *ngIf="isLoggedIn"
+          <button type="button" style="color:  rgb(255, 255, 255);" class="btn2" *ngIf="isLoggedIn"
             routerLink="profile">Profile</button>
         </div>
       </div>
@@ -28,10 +27,171 @@
 
 
 
+  <style>
+.team-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+align-items: baseline;
+}
+
+.team-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.vs {
+  font-size: 24px;
+  margin: 0 10px;
+}
+.card{
+  margin-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+.team-icon {
+  width: 50px;
+  height: 50px;
+}
+.team-result{
+margin-top: -20px;
+}
+.team-name {
+  margin-top: 5px;
+  text-align: center;
+  color: #fff;
+}
 
 
-  <div class="container">
-    <h1 class="mt-3">Descubra um Universo de Jogos</h1>
+.team-icon {
+  width: 50px; /* Defina o tamanho desejado para os ícones */
+}
+.container {
+  text-align: center;
+}
+
+
+
+.btn {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px 20px;
+  background-color: #ddd;
+  border: none;
+  cursor: pointer;
+}
+
+.games-container {
+  margin-top: 20px;
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.team {
+  margin: 0 10px;
+}
+
+.vs {
+  color: #fff;
+  font-weight: bold;
+}
+.team-result{
+  color: #fff;
+}
+
+
+
+    .background-overlay {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .background-overlay:before {
+      content: "";
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      width: 80%;
+      height: 60%;
+      background-image: url('assets/god.png');
+      background-size: cover;
+      opacity: 0.8;
+    }
+
+    .background-overlay:after {
+      content: "";
+      position: absolute;
+      top: 15%;
+      align-items: center;
+      width: 100%;
+      height: 80%;
+
+      background-image: url('assets/godd.png');
+      background-size: cover;
+
+    }
+    .background-over h1{
+margin-top: 3%;
+margin-bottom: -10%;
+  font-size: 1.4em;
+}
+.background-over h2{
+  color: #fff;
+  margin-bottom: 5%;
+}
+.background-over p{
+color: #9c9c9c;
+}
+  </style>
+  <div class="background-over">
+  <div class="background-overlay">
+
+    <!-- Conteúdo da página -->
+
+  </div>
+  <h1>ABOUT ELYSIUM</h1>
+  <h2>Descubra um Universo de Jogos</h2>
+  <p>Junte-se a nós no Mundo dos Jogos! Divirta-se, compita e faça amigos. Temos algo para todos os tipos de jogadores. Explore recursos, faça novas amizades, melhore suas habilidades e faça parte de nossa comunidade vibrante.</p>
+
+  <div class="button-container">
+    <a href="/about" class="button">Saiba Mais</a>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
+</div>
+
+
+
+
+  <style>
+    .background-over {
+      background: linear-gradient(to right, #11172c 50%, #14142c 50%);
+      background-size: 200% 100%;
+      animation: background-animation 5s linear infinite;
+    }
+
+    @keyframes background-animation {
+      0% { background-position: 0 0; }
+      100% { background-position: -100% 0; }
+    }
+  </style>
+
+
 
 
 
@@ -43,14 +203,15 @@
 
       .parallax {
         position: relative;
-        height: 350px;
+        height: 200px;
         overflow: hidden;
-        width: 350px;
+        width: 200px;
         border-radius: 50%;
         transform-style: preserve-3d;
 
         box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.445);
       }
+
 
       .parallax:before {
         content: "";
@@ -66,33 +227,25 @@
 
       }
 
-      .content {
+      #fox {
         position: relative;
         text-align: center;
-        margin-top: -50%;
+        margin-bottom: 210%;
+        width: 70%;
+        height: auto;
+      }
+      .service-title h2{
+       text-align: left;
+      }
+      .btn{
+        display: inline-block;
+    padding: 10px 20px;
+    background-color: #00aaff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
       }
     </style>
-
-    <body>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 offset-md-3">
-            <div class="parallax">
-              <div class="content">
-                <img src="assets\foza.gif" alt="Imagem Sobreposta" class="img-fluid">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <p class="mb-3">Junte-se a nós no Mundo dos Jogos e mergulhe em uma experiência inigualável de diversão,
-        competição e camaradagem. Não importa se você é um jogador casual ou um competidor ávido, temos algo para todos.
-        Explore nossos recursos, faça novos amigos, melhore suas habilidades e torne-se parte de uma comunidade vibrante
-        de jogadores.
-
-      </p>
-      <a href="#" class="btn1">Botão</a>
 
 
 
@@ -108,17 +261,57 @@
         <div class="bottom-pattern-layer" style="background-image: url(assets/pattern-2.png);"></div>
 
       </section>
-
       <!--Video Section-->
       <section class="video-section">
-        <div class="image-layer" style="background-image: url(assets/video-bg.jpg);"></div>
+        <div class="image-layer" style="background-image: url(assets/vava.jpg);"></div>
 
         <div class="auto-container">
           <div class="content-box wow zoomInStable" data-wow-delay="0ms" data-wow-duration="2500ms">
             <div class="content">
-              <img src="assets\image_10_2.png" alt="Overlay Image">
-              <h1>Jogos</h1>
-              <p>This is a sample text below the image.</p>
+              <div class="container">
+                <h1 class="text-center">
+                  TORNEIOS POPULARES</h1>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="d-flex justify-content-between">
+                      <button class="btn  mb-3" (click)="showGamesToday()" [class.active]="gamesToday.length > 0">Próximos Jogos</button>
+                      <button class="btn  mb-3" (click)="showPastGames()">Resultados</button>
+                    </div>
+                    <div class="tournament-title" *ngIf="gamesToday.length > 0">
+                      <div class="card" *ngFor="let game of gamesToday">
+                        <div class="team-container">
+                          <div class="team-info">
+                            <img src="{{ game.team1.icon }}" alt="Team 1 Icon" class="team-icon">
+                            <span class="team-name">{{ game.team1.name }}</span>
+                          </div>
+                          <div class="vs">vs</div>
+                          <div class="team-info">
+                            <img src="{{ game.team2.icon }}" alt="Team 2 Icon" class="team-icon">
+                            <span class="team-name">{{ game.team2.name }}</span>
+                          </div>
+                        </div>
+                        <div class="team-result" *ngIf="game.result !== ''">Resultado: {{ game.result }}</div>
+                      </div>
+                    </div>
+                    <div class="tournament-title" *ngIf="pastGames.length > 0">
+                      <div class="card" *ngFor="let game of pastGames">
+                        <div class="team-container">
+                          <div class="team-info">
+                            <img src="{{ game.team1.icon }}" alt="Team 1 Icon" class="team-icon">
+                            <span class="team-name">{{ game.team1.name }}</span>
+                          </div>
+                          <div class="vs">vs</div>
+                          <div class="team-info">
+                            <img src="{{ game.team2.icon }}" alt="Team 2 Icon" class="team-icon">
+                            <span class="team-name">{{ game.team2.name }}</span>
+                          </div>
+                        </div>
+                        <div class="team-result">{{ game.result }}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -129,18 +322,114 @@
       <section class="featured-games-section">
         <div class="top-pattern-layer" style="background-image: url(assets/pattern-1.png);"></div>
       </section>
+      <style>
+        .title-container {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+
+        .title-image {
+          width: 60%;
+          height: auto;
+          font-weight: bold;
+        }
+        .card-text{
+          text-align: left;
+          font-size: 1.1em;
+        }
+        h5{
+          font-weight: bold;
+        }
+      </style>
+
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="title-container">
+        <h2 class="mb-0 font-weight-bold">POSTAGENS POPULARES</h2>
+        <img class="title-image" src="assets/c.png" alt="Imagem pequena">
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+</style>
+
+
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-4">
+            <a href="https://valorantzone.gg/noticia/atualizacao-6-10-roda-de-sprays-e-ajustes-no-brimstone-chegam-ao-jogo/" class="black fondo-publicacion-home">
+              <div class="card border-0">
+                <img class="card-img-top" src="assets\bind.jpg"alt="Imagem de capa do card">
+                <div class="card-body p-0 text-left">
+                  <h5 class="card-title m-0 pt-3 pb-4 text-white font-weight-bold">Atualização 6.10 – Roda de Sprays e ajustes no Brimstone chegam ao jogo.</h5>
+                  <p class="card-text">Riot Games revelou, nesta terça-feira (23) a atualização 6.10 completa do VALORANT. Entre as principais novidades estão melhorias nos sprays e uma roda para os itens, rework de coleções e ajustes no Brimstone.</p>
+                  <a href="sua-pagina.html" class="btn btn-primary">Visitar</a>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-4">
+            <a href="sua-pagina.html">
+              <div class="card border-0">
+                <img class="card-img-top" src="assets\de.webp" alt="Imagem de capa do card">
+                <div class="card-body p-0 text-left">
+                  <h5 class="card-title m-0 pt-3 pb-4 text-white font-weight-bold">Dead Cells já vendeu 10 milhões de cópias e promete novidades até 2025</h5>
+                  <p class="card-text">A desenvolvedora independente Motion Twin anunciou nesta segunda-feira (5) que já vendeu mais de 10 milhões de unidades de Dead Cells. Lançado em 2017, o game recebeu diversas atualizações desde sua estreia..</p>
+                  <a href="sua-pagina.html" class="btn btn-primary">Visitar</a>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+        </div>
+    <div class="carousel-item">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-4">
+            <a href="sua-pagina.html">
+              <div class="card border-0">
+                <img class="card-img-top" src="assets\d.jpg" alt="Imagem de capa do card">
+                <div class="card-body p-0 text-left">
+                  <h5 class="card-title m-0 pt-3 pb-4 text-white font-weight-bold">Diablo IV - Review</h5>
+                  <p class="card-text">Diablo 4 é um dos mais recentes lançamentos da Blizzard Entertainment. Acertando em quase todos os aspectos, de modo que se mostra um RPG de ação grandioso para jogadores novos ou mesmo aqueles que conhecem a franquia..</p>
+                  <a href="sua-pagina.html" class="btn btn-primary">Visitar</a>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+            </div>
+          </div>
+  <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </a>
+  <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Próximo</span>
+  </a>
+</div>
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-    </body>
