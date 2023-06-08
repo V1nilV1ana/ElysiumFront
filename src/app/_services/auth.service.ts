@@ -39,7 +39,7 @@ export class AuthService {
   }
 
   findUser(id: any): Observable<any>{
-    return this.http.get<any>("http://localhost:8080/api/auth/finds/" + id)
+    return this.http.get<any>("https://peh0sm-8080.csb.app/api/auth/finds/" + id)
   }
 
 
