@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 //deploy https://elysiuap-apitest2.onrender.com/api/auth/ 'http://localhost:8080/api/auth/';
-const AUTH_API = 'http://localhost:8080/api/auth/';
+const AUTH_API = 'https://peh0sm-8080.csb.app/api/auth/';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })

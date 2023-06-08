@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Coments } from '../_models/Coments';
 
-const url = 'http://localhost:8080/api/coments';
+const url = 'https://peh0sm-8080.csb.app/api/coments';
 
 @Injectable({
   providedIn: 'root'
