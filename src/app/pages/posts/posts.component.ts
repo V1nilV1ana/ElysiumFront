@@ -26,6 +26,7 @@ export class PostsComponent {
   title = ''
   isLoggedIn = false;
   user: any
+  display = false
 
   constructor(private postService: PostService,
     private storageService: StorageService,
@@ -115,6 +116,10 @@ updateLike(idButton: any, likes: number): void {
 
   redirectToLogin() {
     this.router.navigate(['/login']);
+  }
+
+  displayMessag() {
+    this.display = true
   }
 }
 

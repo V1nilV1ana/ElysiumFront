@@ -127,3 +127,12 @@ margin-bottom: 20px;
   margin-right: 3px;
   color: #3da3bd;
 }
+.log {
+  text-align: center;
+  color: #ccc
+}
+
+.log a {
+  color: #1da1f2;
+  text-decoration: underline;
+}
