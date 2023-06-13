@@ -46,7 +46,7 @@ h2{
 .team-boxed .item .box {
   text-align:center;
   padding:30px;
-  background-color:#034a52;
+  background-color:#0490a0;
   margin-bottom:30px;
 }
 
@@ -69,6 +69,7 @@ h2{
   font-size:15px;
   margin-top:15px;
   margin-bottom:20px;
+  color: antiquewhite;
 }
 
 .team-boxed .item img {
