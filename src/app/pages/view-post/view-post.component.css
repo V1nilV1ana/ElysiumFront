@@ -225,6 +225,11 @@
         align-items: center;
       }
 
+      .log a{
+        color: #1da1f2;
+        text-decoration: underline;
+      }
+
       .like-button svg {
         margin-right: 0.25rem;
       }
@@ -364,4 +369,12 @@ a{
 
 p{
   color: #ccc;
+}
+
+.log2{
+  color: #ccc
+}
+.log2 a {
+  color: #1da1f2;
+  text-decoration: underline;
 }

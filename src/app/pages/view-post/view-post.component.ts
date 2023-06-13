@@ -25,7 +25,9 @@ export class ViewPostComponent implements OnInit{
   dialogOpenApagarPost = false
   dialogOpenEditarPost = false
   dialogOpenApagarComentario = false
-  dialogOpenEditarComentario =false 
+  dialogOpenEditarComentario = false 
+  
+  display = 0
 
   currentCom: Coments = {
     id: 0,
@@ -226,6 +228,18 @@ export class ViewPostComponent implements OnInit{
 }
     redirectToLogin() {
     this.router.navigate(['/login']);
+    }
+  
+  displayMessag(id: number) {
+    if(id == 1 ){
+      this.display = 1;
+    }
+    if(id == 2 ){
+      this.display = 2;
+     }
+    if(id == 3 ){
+      this.display = 3;
+    }
   }
 
   openDialog(dialogId: string) {
